@@ -1,7 +1,7 @@
 (function () {
   var React = require('react'),
     injectTapEventPlugin = require("react-tap-event-plugin"),
-    Main = require('./components/main.jsx'); // Our custom react component
+    Main = require('./pages/indexPage.jsx'); // Our custom react component
 
   //Needed for React Developer Tools
   window.React = React;

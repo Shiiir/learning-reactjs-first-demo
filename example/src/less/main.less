@@ -6,8 +6,88 @@
 
 @import "node_modules/material-ui/src/less/components.less";
 
-//Your custom app styles
-.example-page {
+@red-color: #FF0000;
+@bg-red-color: #ed322d;
+
+img {
+  padding-bottom: 15px;
+}
+
+h3 {
+  color: @red-color;
+  text-align: left;
+  padding-top: 5%;
+  padding-left: 8%;
+  padding-bottom: 1%;
+}
+
+.mui-tabs-container .mui-tab-item-container {
+  background-color: @bg-red-color;
+}
+
+.imageWall {
   text-align: center;
-  padding-top: 200px;
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+.aboutPage {
+  margin: 40px 15%;
+  width: 70%;
+  text-align: center;
+}
+
+.awardPage {
+  margin: 40px 15%;
+  margin-bottom: 50%;
+  width: 70%;
+  text-align: center;
+}
+
+.contactPage {
+  margin: 40px 15%;
+  width: 70%;
+  text-align: center;
+}
+
+.aboutTitle {
+  margin-top: 10px;
+  height: 50px;
+  overflow: hidden;
+  text-align: left;
+  padding: 0 18px;
+}
+
+.awardTitle {
+  margin-top: 10px;
+  height: 50px;
+  overflow: hidden;
+  text-align: left;
+  padding: 0 18px;
+}
+
+.awardTitle img {
+  position: relative;
+  top: -50px;
+}
+
+.contactTitle {
+  margin-top: 10px;
+  height: 50px;
+  overflow: hidden;
+  text-align: left;
+  padding: 0 18px;
+}
+
+.contactTitle img {
+  position: relative;
+  top: -100px;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: @bg-red-color;
+    text-align: center;
 }
