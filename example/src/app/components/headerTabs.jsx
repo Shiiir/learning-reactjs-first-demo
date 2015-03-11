@@ -17,13 +17,13 @@ var _onActive = function(tab) {
     window.location = tab.props.route;
 };
 
-var Header = React.createClass({
+var HeaderTabs = React.createClass({
   render: function() {
     var tabs = linkData.header.map(function(item) {
         var loadPage = item.link;
         var tabContent;
         if (item.tag) {
-            tabContent = <Tab label={item.name} route={item.link} onActive={_onActive} />
+            tabContent = <Tab label={item.name} route={loadPage} onActive={_onActive} />
         } else {
             switch(loadPage) {
                 case "AboutPage":
@@ -42,7 +42,6 @@ var Header = React.createClass({
             
         }
         
-        console.log(tabContent);
         return (
             {tabContent}
         );
@@ -59,4 +58,4 @@ var Header = React.createClass({
  
 });
 
-module.exports = Header;
+module.exports = HeaderTabs;
