@@ -14,45 +14,45 @@ var ContactPage = require('../pages/contactPage.jsx');
 var linkData = require('../data/linkData');
 var imageData = require('../data/imageData');
 var _onActive = function(tab) {
-    window.location = tab.props.route;
+  window.location = tab.props.route;
 };
 
 var HeaderTabs = React.createClass({
   render: function() {
     var tabs = linkData.header.map(function(item) {
-        var loadPage = item.link;
-        var tabContent;
-        if (item.tag) {
-            tabContent = <Tab label={item.name} route={loadPage} onActive={_onActive} />
-        } else {
-            switch(loadPage) {
-                case "AboutPage":
-                    tabContent = <Tab label={item.name}><AboutPage /></Tab>
-                    break;
-                case "AwardPage":
-                    tabContent = <Tab label={item.name}><AwardPage /></Tab>
-                    break;
-                case "ContactPage":
-                    tabContent = <Tab label={item.name}><ContactPage /></Tab>
-                    break;
-                default:
-                    tabContent = <Tab label={item.name}><HomePage /></Tab>
-                    break;
-            }
-            
+      var loadPage = item.link;
+      var tabContent;
+      if (item.tag) {
+        tabContent = <Tab label={item.name} route={loadPage} onActive={_onActive} />
+      } else {
+        switch(loadPage) {
+          case "AboutPage":
+            tabContent = <Tab label={item.name}><AboutPage /></Tab>
+            break;
+          case "AwardPage":
+            tabContent = <Tab label={item.name}><AwardPage /></Tab>
+            break;
+          case "ContactPage":
+            tabContent = <Tab label={item.name}><ContactPage /></Tab>
+            break;
+          default:
+            tabContent = <Tab label={item.name}><HomePage /></Tab>
+            break;
         }
-        
-        return (
-            {tabContent}
-        );
+          
+      }
+      
+      return (
+        {tabContent}
+      );
     });
     
     return (
-        <div>
-            <Tabs tabWidth={100}>
-                {tabs}
-            </Tabs>
-        </div>
+      <div>
+        <Tabs tabWidth={100}>
+          {tabs}
+        </Tabs>
+      </div>
     );
   },
  

@@ -8,9 +8,9 @@ var Footer = React.createClass({
   
   render: function() {
     return (
-        <div className="footer">
-            <img src={imageData.prefix + imageData.footer} />
-        </div>
+      <div className="footer">
+        <img src={imageData.prefix + imageData.footer} />
+      </div>
     );
   }
   
